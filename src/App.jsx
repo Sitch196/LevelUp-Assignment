@@ -9,7 +9,7 @@ import FinalStage from "./components/FinalStage";
 
 function App() {
   return (
-    <BigWrapper className="App">
+    <BigWrapper>
       <Main>
         <Headerpic src={banner} alt="" />
         <div style={{ padding: "0 1rem" }}>
@@ -38,14 +38,11 @@ const BigWrapper = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
-
-  /* border: 2px solid green; */
 `;
 const Main = styled.div`
   border-radius: 5px;
   margin-top: 1rem;
   width: 40rem;
-  /* border: 1px solid red; */
   background-color: #1c1d1e;
 `;
 const Headerpic = styled.img`

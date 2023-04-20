@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import exampleIcon from "../assets/example-icon.png";
 import travelIcon from "../assets/travel-icon-sm.png";
 import ticketIcon from "../assets/ticket-icon-sm.png";
 import travelconBig from "../assets/travel-icon-big.png";
@@ -9,12 +8,6 @@ import mechanic from "../assets/mechanic-icon.png";
 function Leaderboards() {
   return (
     <>
-      <h5 style={{ color: "whitesmoke" }}>
-        ჰოლდემის TOP20 ლიდერბორდი{" "}
-        <span>
-          <img src={exampleIcon} alt="exampicon" width="17px" />
-        </span>
-      </h5>
       <LeaderBoardContainer>
         <LeaderBoardTitle>
           <p>ადგილი</p>
@@ -128,7 +121,7 @@ const LeaderBoardContainer = styled.div`
   background-color: #2c3234;
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
+  gap: 0.2rem;
   border-radius: 5px;
 `;
 const LeaderBoards = styled.div`
@@ -136,7 +129,7 @@ const LeaderBoards = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* border: 1px solid yellow; */
+  border: 1px solid rgba(69, 71, 69, 0.8);
   padding: 0.3rem 0.5rem;
   border-radius: 20px;
   background-color: #1c1d1e;

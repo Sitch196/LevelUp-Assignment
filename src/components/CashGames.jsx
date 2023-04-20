@@ -2,12 +2,21 @@ import React from "react";
 import styled from "styled-components";
 import Leaderboards from "./Leaderboards";
 import Questions from "./Questions";
+import exampleIcon from "../assets/example-icon.png";
+import Additional from "./Additional";
+
 function CashGames() {
   return (
     <CashContainer>
       <InnerDiv>
         <h3 style={{ color: "whitesmoke" }}>1 ₾ რეიკი = 1 ქულას</h3>
         <InnerInnerDiv>
+          <h5 style={{ color: "whitesmoke" }}>
+            ჰოლდემის TOP20 ლიდერბორდი{" "}
+            <span>
+              <img src={exampleIcon} alt="exampicon" width="17px" />
+            </span>
+          </h5>
           <Leaderboards />
           <Leaderboards />
           <>
@@ -20,15 +29,7 @@ function CashGames() {
           </>
         </InnerInnerDiv>
       </InnerDiv>
-      <AdditionalInfo>
-        <h3>
-          დამატებით შედგება ქეშგეიმის ,ტურნირების და სპინ პოკერის 12 SIDE
-          ლიდერბორდი
-        </h3>
-        <h6 style={{ color: "grey" }}>
-          * Side ლიდერბორდების შესახებ დეტალური ინფორმაცია იხილეთ პოკერის ლობიში
-        </h6>
-      </AdditionalInfo>
+      <Additional />
       <h4 style={{ margin: " 1rem 1rem", color: "white" }}>
         წესები და პირობები
       </h4>
@@ -39,30 +40,6 @@ function CashGames() {
 
 export default CashGames;
 
-const AdditionalInfo = styled.div`
-  margin: 1rem 1rem;
-  padding: 1.2rem;
-  color: whitesmoke;
-  text-align: center;
-  background-color: #2c3234;
-  border-radius: 5px;
-  position: relative;
-
-  &::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 13rem;
-    height: 5px;
-    box-shadow: 0 0 2px 2px #ef5a21;
-    background-color: #ef5a21;
-    border-radius: 20px;
-    overflow-x: hidden;
-    transform: translateX(-50%);
-  }
-`;
 const CashContainer = styled.div`
   /* border: 1px solid green; */
 `;
