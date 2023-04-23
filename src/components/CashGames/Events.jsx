@@ -38,14 +38,14 @@ export default Events;
 const EventContainer = styled.div`
   display: flex;
   justify-content: space-between;
-
   background-color: #2c3234;
   margin: 1.5rem 1rem;
   border-radius: 5px;
+  height: 4rem;
 `;
 
 const EachEvent = styled.div`
-  /* width: 15rem; */
+  width: 33.3%;
   padding: 1rem;
   border-radius: 5px;
   font-weight: bold;
@@ -59,4 +59,5 @@ const EachEvent = styled.div`
 const StyledLink = styled(Link)`
   color: whitesmoke;
   text-decoration: none;
+  font-size: 0.8rem;
 `;

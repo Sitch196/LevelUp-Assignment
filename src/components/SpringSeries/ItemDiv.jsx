@@ -1,8 +1,7 @@
 import React from "react";
-import Leaderboards from "./Leaderboards";
-import exampleIcon from "../assets/example-icon.png";
+import Leaderboards from "../CashGames/Leaderboards";
 import styled from "styled-components";
-import mechanic from "../assets/mechanic-icon.png";
+import mechanic from "../../assets/mechanic-icon.png";
 function ItemDiv() {
   return (
     <InnerDiv>

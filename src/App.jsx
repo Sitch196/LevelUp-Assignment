@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import banner from "./assets/banner.jpg";
-import CashGames from "./components/CashGames";
 import "./app.css";
-import Events from "./components/Events";
+import CashGames from "./components/CashGames/CashGames";
+import Events from "./components/CashGames/Events";
 import { Route, Routes } from "react-router-dom";
-import SpringSeries from "./components/SpringSeries";
-import FinalStage from "./components/FinalStage";
+import SpringSeries from "./components/SpringSeries/SpringSeries";
+import FinalStage from "./components/FinalStage/FinalStage";
 
 function App() {
   return (
@@ -42,7 +42,7 @@ const BigWrapper = styled.div`
 const Main = styled.div`
   border-radius: 5px;
   margin-top: 1rem;
-  width: 40rem;
+  width: 45rem;
   background-color: #1c1d1e;
 `;
 const Headerpic = styled.img`

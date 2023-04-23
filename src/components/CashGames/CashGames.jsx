@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import Leaderboards from "./Leaderboards";
-import Questions from "./Questions";
-import exampleIcon from "../assets/example-icon.png";
-import Additional from "./Additional";
+import Questions from "../SpringSeries/Questions";
+import exampleIcon from "../../assets/example-icon.png";
+import Additional from "../SpringSeries/Additional";
 
 function CashGames() {
   return (
@@ -11,12 +11,12 @@ function CashGames() {
       <InnerDiv>
         <h3 style={{ color: "whitesmoke" }}>1 ₾ რეიკი = 1 ქულას</h3>
         <InnerInnerDiv>
-          <h5 style={{ color: "whitesmoke" }}>
-            ჰოლდემის TOP20 ლიდერბორდი{" "}
-            <span>
+          <Exclam>
+            <h5 style={{ color: "whitesmoke" }}>
+              ჰოლდემის TOP20 ლიდერბორდი{" "}
               <img src={exampleIcon} alt="exampicon" width="17px" />
-            </span>
-          </h5>
+            </h5>
+          </Exclam>
           <Leaderboards />
           <Leaderboards />
           <>
@@ -40,9 +40,6 @@ function CashGames() {
 
 export default CashGames;
 
-const CashContainer = styled.div`
-  /* border: 1px solid green; */
-`;
 const InnerDiv = styled.div`
   /* border: 1px solid red; */
   margin: 0 1rem;
@@ -57,4 +54,12 @@ const InnerInnerDiv = styled.div`
   border-radius: 5px;
   background-color: #1c1d1e;
   padding: 0.4rem 0;
+`;
+const Exclam = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+const CashContainer = styled.div`
+  /* border: 1px solid green; */
 `;

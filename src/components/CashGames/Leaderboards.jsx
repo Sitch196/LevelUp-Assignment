@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import travelIcon from "../assets/travel-icon-sm.png";
-import ticketIcon from "../assets/ticket-icon-sm.png";
-import travelconBig from "../assets/travel-icon-big.png";
-import ticketIconBig from "../assets/ticket-icon-big.png";
-import mechanic from "../assets/mechanic-icon.png";
+import travelIcon from "../../assets/travel-icon-sm.png";
+import ticketIcon from "../../assets/ticket-icon-sm.png";
+import travelconBig from "../../assets/travel-icon-big.png";
+import ticketIconBig from "../../assets/ticket-icon-big.png";
+import mechanic from "../../assets/mechanic-icon.png";
 function Leaderboards() {
   return (
     <>
