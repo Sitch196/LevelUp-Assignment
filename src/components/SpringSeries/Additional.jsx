@@ -28,13 +28,13 @@ const AdditionalInfo = styled.div`
     content: "";
     display: block;
     position: absolute;
-    top: 0;
+    top: 0.1rem;
     left: 50%;
-    width: 13rem;
-    height: 5px;
-    box-shadow: 0 0 2px 2px #ef5a21;
+    width: 20%;
+    height: 3px;
+    box-shadow: 0 0 3px 2px #ef5a21;
     background-color: #ef5a21;
-    border-radius: 20px;
+    border-radius: 0 0 20px 20px;
     overflow-x: hidden;
     transform: translateX(-50%);
   }

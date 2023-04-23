@@ -4,16 +4,16 @@ import travelIcon from "../../assets/travel-icon-sm.png";
 import ticketIcon from "../../assets/ticket-icon-sm.png";
 import travelconBig from "../../assets/travel-icon-big.png";
 import ticketIconBig from "../../assets/ticket-icon-big.png";
-import mechanic from "../../assets/mechanic-icon.png";
+import gift from "../../assets/gift.png";
 function Leaderboards() {
   return (
     <>
+      <LeaderBoardTitle>
+        <p>ადგილი</p>
+        <p>ვაუჩერი</p>
+        <p>პრიზი</p>
+      </LeaderBoardTitle>
       <LeaderBoardContainer>
-        <LeaderBoardTitle>
-          <p>ადგილი</p>
-          <p>ვაუჩერი</p>
-          <p>პრიზი</p>
-        </LeaderBoardTitle>
         <LeaderBoards>
           <Num>1</Num>
           <p>--</p>
@@ -55,26 +55,48 @@ function Leaderboards() {
           <p>800 ₾</p>
           <Category>სპეც ტურნირის ბილეთი</Category>
         </LeaderBoards>
+        <LeaderBoards>
+          <Num>7</Num>
+          <p>800 ₾</p>
+          <Category>სპეც ტურნირის ბილეთი</Category>
+        </LeaderBoards>
+        <LeaderBoards>
+          <Num>8</Num>
+          <p>800 ₾</p>
+          <Category>სპეც ტურნირის ბილეთი</Category>
+        </LeaderBoards>
+        <LeaderBoards>
+          <Num>9</Num>
+          <p>800 ₾</p>
+          <Category>სპეც ტურნირის ბილეთი</Category>
+        </LeaderBoards>
+        <LeaderBoards>
+          <Num>10</Num>
+          <p>800 ₾</p>
+          <Category>სპეც ტურნირის ბილეთი</Category>
+        </LeaderBoards>
       </LeaderBoardContainer>
       <VoucherContainer>
         <EachVoucher>
           <span>
-            <img src={travelconBig} alt="" width="30px" />
+            <img src={travelconBig} alt="travelicon" width="30px" />
           </span>
-          The Festival In Malta-ს საგზური
+          <p> The Festival In Malta-ს საგზური</p>
         </EachVoucher>
         <EachVoucher>
           <span>
-            <img src={ticketIconBig} alt="" width="30px" />
+            <img src={ticketIconBig} alt="travelicon" width="30px" />
           </span>
-          სპეციალური ტურნირის "Cashgame Sharks " ბილეთი,სადაც გათამაშდება The
-          Festival in Malta-ს საგზური
+          <p>
+            სპეციალური ტურნირის "Cashgame Sharks" ბილეთი,სადაც გათამაშდება The
+            Festival in Malta-ს საგზური
+          </p>
         </EachVoucher>
         <EachVoucher>
           <span>
-            <img src={mechanic} alt="" width="30px" />
+            <img src={gift} alt="travelicon" width="30px" />
           </span>
-          ტექნიკის მაღაზიის ვაუჩერი
+          <p>ტექნიკის მაღაზიის ვაუჩერი</p>
         </EachVoucher>
       </VoucherContainer>
     </>
@@ -83,18 +105,22 @@ function Leaderboards() {
 
 export default Leaderboards;
 const VoucherContainer = styled.div`
-  /* border: 1px solid red; */
   margin: 1rem;
   padding: 0.6rem;
   background-color: #2c3234;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 0.4rem;
   border-radius: 5px;
+  @media (width<400px) {
+    p {
+      font-size: 0.8rem;
+    }
+  }
 `;
 const EachVoucher = styled.div`
-  /* border: 1px solid green; */
-  background-color: #1c1d1e;
+  background-color: #202324;
   font-size: xx-small;
   color: whitesmoke;
   font-weight: bold;
@@ -102,10 +128,26 @@ const EachVoucher = styled.div`
   justify-content: flex-start;
   align-items: center;
 
-  padding: 0.4rem 0.6rem;
+  padding: 0.6rem 0.7rem;
   gap: 5rem;
   border-radius: 10px;
-  border-left: 6px solid #ef5a21;
+  /* border-left: 6px solid #ef5a21; */
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0.7rem;
+    left: 0.1rem;
+    width: 2px;
+    height: 50%;
+    box-shadow: 0px 0 2px 1px #ef5a21;
+    background-color: #ef5a21;
+    border-radius: 0 25px 25px 0;
+    overflow-x: hidden;
+    transform: translateX(-50%);
+  }
 `;
 const LeaderBoardTitle = styled.div`
   display: flex;
@@ -113,9 +155,9 @@ const LeaderBoardTitle = styled.div`
   align-items: center;
   color: gray;
   font-size: small;
+  padding: 0.5rem 0;
 `;
 const LeaderBoardContainer = styled.div`
-  /* border: 1px solid red; */
   margin: 1rem 1rem;
   padding: 0.6rem;
   background-color: #2c3234;
@@ -123,6 +165,8 @@ const LeaderBoardContainer = styled.div`
   flex-direction: column;
   gap: 0.2rem;
   border-radius: 5px;
+  height: 20rem;
+  overflow-x: hidden;
 `;
 const LeaderBoards = styled.div`
   color: whitesmoke;
@@ -133,6 +177,9 @@ const LeaderBoards = styled.div`
   padding: 0.3rem 0.5rem;
   border-radius: 20px;
   background-color: #1c1d1e;
+  @media (width<400px) {
+    padding: 0.58rem 0.5rem;
+  }
 `;
 const Category = styled.p`
   font-size: small;

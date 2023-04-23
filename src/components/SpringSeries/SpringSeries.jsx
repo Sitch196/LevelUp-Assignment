@@ -6,6 +6,7 @@ import ItemDiv from "./ItemDiv";
 import Everyday from "./Everyday";
 import Additional from "./Additional";
 import Questions from "./Questions";
+import Slider from "../CashGames/Slider";
 function SpringSeries() {
   return (
     <SpringContainer>
@@ -34,6 +35,9 @@ function SpringSeries() {
         წესები და პირობები
       </h4>
       <Questions />
+      <h4 style={{ color: "whitesmoke", margin: "0 1rem" }}>მსგავსი აქციები</h4>
+
+      <Slider />
     </SpringContainer>
   );
 }

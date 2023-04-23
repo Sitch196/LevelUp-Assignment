@@ -4,12 +4,14 @@ import Leaderboards from "./Leaderboards";
 import Questions from "../SpringSeries/Questions";
 import exampleIcon from "../../assets/example-icon.png";
 import Additional from "../SpringSeries/Additional";
-
+import Slider from "./Slider";
 function CashGames() {
   return (
     <CashContainer>
       <InnerDiv>
-        <h3 style={{ color: "whitesmoke" }}>1 ₾ რეიკი = 1 ქულას</h3>
+        <h3 style={{ color: "whitesmoke", padding: ".5rem 0" }}>
+          1 ₾ რეიკი = 1 ქულას
+        </h3>
         <InnerInnerDiv>
           <Exclam>
             <h5 style={{ color: "whitesmoke" }}>
@@ -22,7 +24,13 @@ function CashGames() {
           <>
             <h6 style={{ color: "whitesmoke" }}>
               * ლიდერბორდის შედეგები განახლდება{" "}
-              <span style={{ textDecoration: "underline", color: "#ef5a21" }}>
+              <span
+                style={{
+                  textDecoration: "underline",
+                  color: "#ef5a21",
+                  cursor: "pointer",
+                }}
+              >
                 პოკერის ლობიში
               </span>
             </h6>
@@ -34,6 +42,9 @@ function CashGames() {
         წესები და პირობები
       </h4>
       <Questions />
+      <h4 style={{ color: "whitesmoke", margin: "0 1rem" }}>მსგავსი აქციები</h4>
+
+      <Slider />
     </CashContainer>
   );
 }
@@ -41,15 +52,29 @@ function CashGames() {
 export default CashGames;
 
 const InnerDiv = styled.div`
-  /* border: 1px solid red; */
   margin: 0 1rem;
   text-align: center;
   border-radius: 5px;
   background-color: #2c3234;
   padding: 0.5rem 0;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0.1rem;
+    left: 50%;
+    width: 20%;
+    height: 2px;
+    box-shadow: 0 0 3px 2px #ef5a21;
+    background-color: #ef5a21;
+    border-radius: 0 0 20px 20px;
+    overflow-x: hidden;
+    transform: translateX(-50%);
+  }
 `;
 const InnerInnerDiv = styled.div`
-  /* border: 1px solid white; */
   margin: 0.4rem 0.2rem;
   border-radius: 5px;
   background-color: #1c1d1e;

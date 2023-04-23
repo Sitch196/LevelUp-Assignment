@@ -4,6 +4,7 @@ import Shelf from "./Shelf";
 import SmallShelf from "./SmalShelf";
 import Tour from "./Tour";
 import MysticKey from "./MysticKey";
+import Slider from "../CashGames/Slider";
 function FinalStage() {
   return (
     <FinalStageWrapper>
@@ -33,6 +34,8 @@ function FinalStage() {
       </FestivalWrapper>
       <Tour />
       <MysticKey />
+      <h4 style={{ color: "whitesmoke", margin: "0 1rem" }}>მსგავსი აქციები</h4>
+      <Slider />
     </FinalStageWrapper>
   );
 }
@@ -57,9 +60,24 @@ const Subtitle = styled.p`
   padding: 0.7rem 0.8rem;
   background-color: #2c3234;
   border-radius: 5px;
-  border-left: 6px solid #ef5a21;
   @media (width<700px) {
     width: 90%;
+  }
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0.7rem;
+    left: 0.1rem;
+    width: 2px;
+    height: 55%;
+    box-shadow: 0px 0 2px 1px #ef5a21;
+    background-color: #ef5a21;
+    border-radius: 0 25px 25px 0;
+    overflow-x: hidden;
+    transform: translateX(-50%);
   }
 `;
 const Title = styled.div`

@@ -51,6 +51,22 @@ const EachShelf = styled.div`
   background-color: #2c3234;
   border-radius: 10px;
   height: 100%;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0.1rem;
+    left: 50%;
+    width: 35%;
+    height: 2px;
+    box-shadow: 0 0 2px 1px #ef5a21;
+    background-color: #ef5a21;
+    border-radius: 0 0 25px 25px;
+    overflow-x: hidden;
+    transform: translateX(-50%);
+  }
 `;
 const Drawer = styled.div`
   display: flex;
