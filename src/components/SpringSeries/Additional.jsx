@@ -16,12 +16,16 @@ function Additional() {
 
 export default Additional;
 const AdditionalInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
   margin: 1rem 1rem;
   padding: 1.2rem;
   color: whitesmoke;
   text-align: center;
   background-color: #2c3234;
   border-radius: 5px;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.4);
   position: relative;
 
   &::before {
@@ -37,5 +41,9 @@ const AdditionalInfo = styled.div`
     border-radius: 0 0 20px 20px;
     overflow-x: hidden;
     transform: translateX(-50%);
+  }
+
+  @media (width<400px) {
+    padding: 1.2rem 3.5rem;
   }
 `;

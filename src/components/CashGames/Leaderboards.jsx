@@ -10,7 +10,12 @@ function Leaderboards() {
     <>
       <LeaderBoardTitle>
         <p>ადგილი</p>
-        <p>ვაუჩერი</p>
+        <p>
+          <span>
+            <img src={gift} width="17px" />
+          </span>{" "}
+          ვაუჩერი
+        </p>
         <p>პრიზი</p>
       </LeaderBoardTitle>
       <LeaderBoardContainer>
@@ -131,7 +136,6 @@ const EachVoucher = styled.div`
   padding: 0.6rem 0.7rem;
   gap: 5rem;
   border-radius: 10px;
-  /* border-left: 6px solid #ef5a21; */
   position: relative;
 
   &::before {
@@ -151,11 +155,15 @@ const EachVoucher = styled.div`
 `;
 const LeaderBoardTitle = styled.div`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   color: gray;
   font-size: small;
-  padding: 0.5rem 0;
+  padding: 0.5rem 8rem 0.5rem 1rem;
+  @media (width<500px) {
+    font-size: 0.8rem;
+    padding: 0.5rem 9rem 0.5rem 1rem;
+  }
 `;
 const LeaderBoardContainer = styled.div`
   margin: 1rem 1rem;
@@ -177,12 +185,17 @@ const LeaderBoards = styled.div`
   padding: 0.3rem 0.5rem;
   border-radius: 20px;
   background-color: #1c1d1e;
+
   @media (width<400px) {
     padding: 0.58rem 0.5rem;
+    font-size: 0.9rem;
   }
 `;
 const Category = styled.p`
   font-size: small;
+  @media (width<450px) {
+    font-size: 0.8rem;
+  }
 `;
 const Num = styled.p`
   background-color: #2c3234;

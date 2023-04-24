@@ -14,10 +14,8 @@ function CashGames() {
         </h3>
         <InnerInnerDiv>
           <Exclam>
-            <h5 style={{ color: "whitesmoke" }}>
-              ჰოლდემის TOP20 ლიდერბორდი{" "}
-              <img src={exampleIcon} alt="exampicon" width="17px" />
-            </h5>
+            <h5 style={{ color: "whitesmoke" }}>ჰოლდემის TOP20 ლიდერბორდი </h5>
+            <img src={exampleIcon} alt="exampicon" width="17px" />
           </Exclam>
           <Leaderboards />
           <Leaderboards />
@@ -84,6 +82,7 @@ const Exclam = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 0.3rem;
 `;
 const CashContainer = styled.div`
   /* border: 1px solid green; */

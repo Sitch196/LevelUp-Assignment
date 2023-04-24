@@ -75,6 +75,7 @@ const SliderContainer = styled.div`
   display: flex;
   gap: 1rem;
   overflow-y: hidden;
+  overflow-x: hidden;
   cursor: grab;
   &::-webkit-scrollbar {
     height: 0;

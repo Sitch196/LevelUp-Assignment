@@ -48,16 +48,20 @@ const Date = styled.p`
   border: 2px solid #ef5a21;
   padding: 0 0.2rem;
   border-radius: 5px;
-  font-weight: bold;
   font-size: small;
-  box-shadow: 0 0 4px #ef5a21;
+  box-shadow: inset 0 0 2px 0 #ef5a21;
   @media (width<400px) {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
+    padding: 0.1rem 0.3rem;
   }
 `;
 const CardImage = styled.img`
   position: relative;
   top: 2.1rem;
+  @media (width<500px) {
+    width: 90px;
+    height: 80px;
+  }
 `;
 const Text = styled.div`
   display: flex;
@@ -73,12 +77,12 @@ const LobyBtn = styled.button`
   border: none;
   margin-bottom: 0.4rem;
   width: 7rem;
-  border-radius: 5px;
+  border-radius: 2px;
   color: whitesmoke;
   padding: 0.2rem 0;
   font-weight: bold;
   @media (width<400px) {
-    font-size: x-small;
+    font-size: 0.7rem;
   }
 `;
 

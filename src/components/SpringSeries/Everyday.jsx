@@ -4,7 +4,9 @@ function Everyday() {
   return (
     <EverydayContainer>
       <InnerEveryDay>
-        <h4>ყოველდღური ტურნირები და სატელიტები</h4>
+        <h4 style={{ padding: ".5rem 0 0 0" }}>
+          ყოველდღური ტურნირები და სატელიტები
+        </h4>
         <UpperTwo>
           <Image1>
             <TournamentContainer>
