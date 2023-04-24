@@ -75,12 +75,15 @@ const SliderContainer = styled.div`
   display: flex;
   gap: 1rem;
   overflow-y: hidden;
-  overflow-x: hidden;
+  overflow-x: scroll;
   cursor: grab;
   &::-webkit-scrollbar {
     height: 0;
   }
   &:active {
     cursor: grabbing;
+  }
+  @media (width <500px) {
+    margin-bottom: 6rem;
   }
 `;

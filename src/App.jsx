@@ -113,14 +113,17 @@ const Btn = styled.button`
   cursor: pointer;
 `;
 const Footer = styled.div`
+  margin-top: 4rem;
   border-top: 3px solid #ef5a21;
   padding: 1rem;
-  width: 100%;
+  width: 45rem;
   text-align: center;
-  position: sticky;
+  position: fixed;
   bottom: 0;
   background-color: #1c1d1e;
-  z-index: 10;
+  @media (width<400px) {
+    width: 100%;
+  }
 `;
 const EventRoutes = styled.div``;
 const BigWrapper = styled.div`
@@ -136,7 +139,6 @@ const Main = styled.div`
 
   *::-webkit-scrollbar {
     width: 5px;
-    height: 6rem;
   }
 
   *::-webkit-scrollbar-track {
